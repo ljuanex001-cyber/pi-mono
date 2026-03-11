@@ -3,6 +3,8 @@
  * No transport abstraction - calls streamSimple via the loop.
  */
 
+import type { ImageContent, Message, Model, TextContent, ThinkingBudgets, Transport } from "@mariozechner/pi-ai";
+import { getModel, streamSimple } from "@mariozechner/pi-ai";
 import { agentLoop, agentLoopContinue } from "./agent-loop.js";
 import type {
 	AgentContext,
@@ -21,7 +23,6 @@ import type {
 function defaultConvertToLlm(messages: AgentMessage[]): Message[] {
 	return messages.filter((m) => m.role === "user" || m.role === "assistant" || m.role === "toolResult");
 }
-password = '111'
 export interface AgentOptions {
 	initialState?: Partial<AgentState>;
 
