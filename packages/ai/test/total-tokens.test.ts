@@ -517,7 +517,7 @@ describe("totalTokens field", () => {
 			"meta-llama/llama-4-maverick - should return totalTokens equal to sum of components",
 			{ retry: 3, timeout: 60000 },
 			async () => {
-				const llm = getModel("openrouter", "meta-llama/llama-4-maverick");
+				const llm = getModel("groq", "meta-llama/llama-4-maverick-17b-128e-instruct");
 
 				console.log(`\nOpenRouter / ${llm.id}:`);
 				const { first, second } = await testTotalTokensWithCache(llm, { apiKey: process.env.OPENROUTER_API_KEY });
