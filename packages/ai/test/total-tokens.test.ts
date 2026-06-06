@@ -246,7 +246,7 @@ describe("totalTokens field", () => {
 			"grok-3-fast - should return totalTokens equal to sum of components",
 			{ retry: 3, timeout: 60000 },
 			async () => {
-				const llm = getModel("xai", "grok-3-fast");
+				const llm = getModel("xai", "grok-4.20-0309-non-reasoning");
 
 				console.log(`\nxAI / ${llm.id}:`);
 				const { first, second } = await testTotalTokensWithCache(llm, { apiKey: process.env.XAI_API_KEY });
@@ -497,10 +497,10 @@ describe("totalTokens field", () => {
 		);
 
 		it(
-			"google/gemini-2.0-flash-001 - should return totalTokens equal to sum of components",
+			"google/gemini-2.0-flash - should return totalTokens equal to sum of components",
 			{ retry: 3, timeout: 60000 },
 			async () => {
-				const llm = getModel("openrouter", "google/gemini-2.0-flash-001");
+				const llm = getModel("openrouter", "ai21/jamba-large-1.7");
 
 				console.log(`\nOpenRouter / ${llm.id}:`);
 				const { first, second } = await testTotalTokensWithCache(llm, { apiKey: process.env.OPENROUTER_API_KEY });
@@ -540,7 +540,7 @@ describe("totalTokens field", () => {
 			"gpt-4o - should return totalTokens equal to sum of components",
 			{ retry: 3, timeout: 60000 },
 			async () => {
-				const llm = getModel("github-copilot", "gpt-4o");
+				const llm = getModel("github-copilot", "claude-opus-4.5");
 
 				console.log(`\nGitHub Copilot / ${llm.id}:`);
 				const { first, second } = await testTotalTokensWithCache(llm, { apiKey: githubCopilotToken });

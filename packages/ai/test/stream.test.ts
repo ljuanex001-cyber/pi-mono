@@ -959,7 +959,7 @@ describe("Generate E2E Tests", () => {
 	});
 
 	describe("GitHub Copilot Provider (gpt-4o via OpenAI Completions)", () => {
-		const llm = getModel("github-copilot", "gpt-4o");
+		const llm = getModel("github-copilot", "claude-opus-4.5");
 
 		it.skipIf(!githubCopilotToken)("should complete basic text generation", { retry: 3 }, async () => {
 			await basicTextGeneration(llm, { apiKey: githubCopilotToken });

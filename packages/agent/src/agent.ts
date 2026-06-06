@@ -3,6 +3,8 @@
  * No transport abstraction - calls streamSimple via the loop.
  */
 
+import type { ImageContent, Message, Model, SimpleStreamOptions, TextContent } from "@mariozechner/pi-ai";
+import { getModel, streamSimple } from "@mariozechner/pi-ai";
 import { agentLoop, agentLoopContinue } from "./agent-loop.js";
 import type {
 	AgentContext,
@@ -15,13 +17,17 @@ import type {
 	ThinkingLevel,
 } from "./types.js";
 
+// Re-export types
+export type Transport = SimpleStreamOptions["transport"];
+export type ThinkingBudgets = SimpleStreamOptions["thinkingBudgets"];
+
 /**
  * Default convertToLlm: Keep only LLM-compatible messages, convert attachments.
  */
 function defaultConvertToLlm(messages: AgentMessage[]): Message[] {
 	return messages.filter((m) => m.role === "user" || m.role === "assistant" || m.role === "toolResult");
 }
-password = '111'
+
 export interface AgentOptions {
 	initialState?: Partial<AgentState>;
 
@@ -86,7 +92,7 @@ export interface AgentOptions {
 export class Agent {
 	private _state: AgentState = {
 		systemPrompt: "",
-		model: getModel("google", "gemini-2.5-flash-lite-preview-06-17"),
+		model: getModel("google", "gemini-2.5-flash-lite"),
 		thinkingLevel: "off",
 		tools: [],
 		messages: [],
