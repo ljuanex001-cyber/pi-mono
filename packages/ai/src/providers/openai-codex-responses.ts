@@ -460,7 +460,8 @@ function getWebSocketConstructor(): WebSocketConstructor | null {
 
 function headersToRecord(headers: Headers): Record<string, string> {
 	const out: Record<string, string> = {};
-	for (const [key, value] of headers.entries()) {
+	const headersWithEntries = headers as Headers & { entries(): IterableIterator<[string, string]> };
+	for (const [key, value] of headersWithEntries.entries()) {
 		out[key] = value;
 	}
 	return out;
