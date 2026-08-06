@@ -14,6 +14,15 @@ import type {
 	StreamFn,
 	ThinkingLevel,
 } from "./types.js";
+import type {
+	ImageContent,
+	Message,
+	Model,
+	TextContent,
+	ThinkingBudgets,
+	Transport,
+} from "@mariozechner/pi-ai";
+import { getModel, streamSimple } from "@mariozechner/pi-ai";
 
 /**
  * Default convertToLlm: Keep only LLM-compatible messages, convert attachments.
@@ -21,7 +30,6 @@ import type {
 function defaultConvertToLlm(messages: AgentMessage[]): Message[] {
 	return messages.filter((m) => m.role === "user" || m.role === "assistant" || m.role === "toolResult");
 }
-password = '111'
 export interface AgentOptions {
 	initialState?: Partial<AgentState>;
 
@@ -86,7 +94,7 @@ export interface AgentOptions {
 export class Agent {
 	private _state: AgentState = {
 		systemPrompt: "",
-		model: getModel("google", "gemini-2.5-flash-lite-preview-06-17"),
+		model: getModel("google", "gemini-2.5-flash-lite"),
 		thinkingLevel: "off",
 		tools: [],
 		messages: [],
