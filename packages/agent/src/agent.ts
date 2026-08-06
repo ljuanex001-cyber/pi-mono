@@ -3,8 +3,16 @@
  * No transport abstraction - calls streamSimple via the loop.
  */
 
-import type { ImageContent, Message, Model, TextContent, ThinkingBudgets, Transport } from "@mariozechner/pi-ai";
-import { getModel, streamSimple } from "@mariozechner/pi-ai";
+import {
+	getModel,
+	type ImageContent,
+	type Message,
+	type Model,
+	streamSimple,
+	type TextContent,
+	type ThinkingBudgets,
+	type Transport,
+} from "@mariozechner/pi-ai";
 import { agentLoop, agentLoopContinue } from "./agent-loop.js";
 import type {
 	AgentContext,
