@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed `Agent` by restoring `@mariozechner/pi-ai` imports, removing the stray `password = '111'` assignment, and defaulting to the valid `gemini-2.5-flash-lite` model id.
+
 ## [0.55.0] - 2026-02-24
 
 ## [0.54.2] - 2026-02-23
