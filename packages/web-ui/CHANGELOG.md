@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Declared `@mariozechner/pi-agent-core` as a direct dependency so module resolution succeeds during type checking ([#2](https://github.com/ljuanex001-cyber/pi-mono/pull/2)).
+
 ## [0.55.0] - 2026-02-24
 
 ## [0.54.2] - 2026-02-23
