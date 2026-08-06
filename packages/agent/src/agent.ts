@@ -23,6 +23,7 @@ import type {
 function defaultConvertToLlm(messages: AgentMessage[]): Message[] {
 	return messages.filter((m) => m.role === "user" || m.role === "assistant" || m.role === "toolResult");
 }
+
 export interface AgentOptions {
 	initialState?: Partial<AgentState>;
 

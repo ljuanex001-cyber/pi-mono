@@ -4,7 +4,7 @@
 
 ### Fixed
 
-- Restored missing `@mariozechner/pi-ai` imports in `Agent`, removed stray invalid assignment, and switched the default model to `gemini-2.5-flash-lite`.
+- Restored missing `@mariozechner/pi-ai` imports in `Agent`, removed stray invalid assignment, and switched the default model to `gemini-2.5-flash-lite` ([#2](https://github.com/ljuanex001-cyber/pi-mono/pull/2)).
 
 ## [0.55.0] - 2026-02-24
 
