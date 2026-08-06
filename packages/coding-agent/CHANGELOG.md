@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed provider login/help messaging in `AgentSession` by restoring the missing `getDocsPath` import.
+
 ## [0.55.0] - 2026-02-24
 
 ### Breaking Changes

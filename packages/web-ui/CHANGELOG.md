@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed TypeScript module resolution by declaring `@mariozechner/pi-agent-core` as a web-ui dependency.
+
 ## [0.55.0] - 2026-02-24
 
 ## [0.54.2] - 2026-02-23
