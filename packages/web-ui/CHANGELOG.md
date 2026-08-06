@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Added `@mariozechner/pi-agent-core` as a direct dependency so TypeScript module resolution succeeds ([#4](https://github.com/ljuanex001-cyber/pi-mono/pull/4)).
+
 ## [0.55.0] - 2026-02-24
 
 ## [0.54.2] - 2026-02-23
