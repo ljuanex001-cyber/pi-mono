@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Restored missing `@mariozechner/pi-ai` imports in `Agent`, removed stray invalid assignment, and switched the default model to `gemini-2.5-flash-lite`.
+
 ## [0.55.0] - 2026-02-24
 
 ## [0.54.2] - 2026-02-23
