@@ -28,6 +28,7 @@ import { isContextOverflow, modelsAreEqual, resetApiProviders, supportsXhigh } f
 import { theme } from "../modes/interactive/theme/theme.js";
 import { stripFrontmatter } from "../utils/frontmatter.js";
 import { sleep } from "../utils/sleep.js";
+import { getDocsPath } from "../config.js";
 import { type BashResult, executeBash as executeBashCommand, executeBashWithOperations } from "./bash-executor.js";
 import {
 	type CompactionResult,
