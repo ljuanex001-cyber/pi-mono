@@ -3,6 +3,8 @@
  * No transport abstraction - calls streamSimple via the loop.
  */
 
+import type { ImageContent, Message, Model, TextContent, ThinkingBudgets, Transport } from "@mariozechner/pi-ai";
+import { getModel, streamSimple } from "@mariozechner/pi-ai";
 import { agentLoop, agentLoopContinue } from "./agent-loop.js";
 import type {
 	AgentContext,
@@ -14,15 +16,6 @@ import type {
 	StreamFn,
 	ThinkingLevel,
 } from "./types.js";
-import type {
-	ImageContent,
-	Message,
-	Model,
-	TextContent,
-	ThinkingBudgets,
-	Transport,
-} from "@mariozechner/pi-ai";
-import { getModel, streamSimple } from "@mariozechner/pi-ai";
 
 /**
  * Default convertToLlm: Keep only LLM-compatible messages, convert attachments.
