@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Declared `@mariozechner/pi-agent-core` as a direct dependency ([#10](https://github.com/ljuanex001-cyber/pi-mono/pull/10)).
+
 ## [0.55.0] - 2026-02-24
 
 ## [0.54.2] - 2026-02-23
