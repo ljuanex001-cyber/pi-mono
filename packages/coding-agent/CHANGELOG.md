@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Restored the missing `getDocsPath` import required by provider login/help messaging ([#10](https://github.com/ljuanex001-cyber/pi-mono/pull/10)).
+
 ## [0.55.0] - 2026-02-24
 
 ### Breaking Changes
